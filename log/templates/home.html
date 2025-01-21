@@ -1,0 +1,30 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock title %}
+{% block body %}
+
+<div>
+
+{% for i in contact %}
+<div class="container">
+<div class="card my-4 px-4">
+  <div class="card-header ">
+    <h5 class="card-title">{{i.title}}</h5>
+  </div>
+  <div class="card-body">
+    <p class="card-text" style="color:brown;">{{i.text}}.</p>
+    <p class="card-text" >{{i.date}}.</p>
+    <a href="#" class="btn btn-warning">Grab a coffee</a>
+  </div>
+</div>
+
+</div>
+{% endfor %}
+{%endblock body %}
+
+</div>
+    
+    
+    
+    

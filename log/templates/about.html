@@ -1,0 +1,30 @@
+{% extends "home.html" %}
+{% block title %}about{% endblock title %}
+{% block body %}
+<div class='container my-3 px-5' > 
+  <iframe width="1000" height="400" align="center" src="https://www.youtube.com/embed/ObC-0K7SiT4?si=CqCfEs5EYjpIPRHj">
+  </iframe>
+  </div>
+  <h2 align='center'> share your Coffee stories</h2>
+  
+  <div>
+    <form method='post' >
+
+    <div class="container">
+        {% csrf_token %}
+        
+        <div class="mb-3">
+            <label for="title" class="form-label">title</label>
+            <input type="text" class="form-control" id="title" name="title" placeholder="title">
+            </div>
+      <div class="mb-3">
+        <label for="comment" class="form-label">comment</label>
+        <textarea class="form-control" id="comment" rows="3" name="comment" placeholder="stories"></textarea>
+      </div>
+      <button class='btn btn-success my-5' type="submit" > Submit </button>
+</div>
+</form>
+  </div>
+
+
+{% endblock body %}
